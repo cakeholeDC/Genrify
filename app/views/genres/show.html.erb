@@ -1,0 +1,27 @@
+<h1 style="display: inline-block;"><%= @genre.name %></h1>
+
+<div>
+	<%= button_to "Edit this Genre", edit_genre_path(@genre) %>
+	<%= button_to "Delete this Genre", genre_path(@genre), method: :delete,
+			data: { confirm: "Are you sure you'd like to delete #{@genre.name}"}%>
+</div>
+
+<h2>Genre by Artist & Songs</h2>
+<ul>
+	<% @genre.artists.each do |artist| %>
+		<li><%= link_to artist.name, artist_path(artist) %></li>
+
+		<!-- <h2>Songs</h2> -->
+		<% genre_songs = artist.songs.select do |song| %>
+				<% song.genre == @genre %>
+		<% end %>
+
+		<ul>
+			<% genre_songs.each do |song| %>
+				<li><%= link_to song.name, song_path(song) %></li>
+			<% end %>
+		</ul>
+
+	<% end %>
+</ul>
+
