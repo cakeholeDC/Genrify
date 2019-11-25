@@ -1,2 +1,14 @@
-<h1><%= @song.name %></h1>
-    
+<h1><%= @song.name %>'s Detail Page</h1>
+    <div>
+        <p>
+            Artist: <%= link_to @song.artist.name, artist_path(@song.artist) %>
+            &nbsp; Genre: <%= link_to @song.genre.name, genre_path(@song.genre) %>
+        </p>
+        <p>All of their songs:</p>
+        <ul>
+            <% Song.all.select do |song| %>
+               <% song.artist == @song.artist %>
+               <li><%= link_to song.name, song_path(song) %></li>
+            <% end %>
+        </ul>
+    </div>

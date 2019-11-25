@@ -12,8 +12,13 @@
         <% end %>
     </datalist>
 
-
-
-
+    <%= f.label :genre_name %>
+    <%= f.text_field :genre_name, list: "genres_autocomplete" %>
+    <datalist id="genres_autocomplete">
+        <% Genre.all.each do |genre| %>
+            <option value="<%= genre.name %>">
+        <% end %>
+    </datalist>
+    
     <%= f.submit %>
 <% end %>
