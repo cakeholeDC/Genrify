@@ -20,6 +20,16 @@
  	font-family: 'Gotham-Medium'
  }
 
+ .button_to input {
+ 	border-radius: 500px;
+ 	background-color: rgb(25, 158, 72);
+ 	border-color: black;
+ 	border-style: solid 1px;
+    padding: 10px 30px 10px;
+    margin-bottom: 5px;
+    display: inline-block;
+ }
+
  @font-face {
    font-family: 'Gotham-Medium';
    src: url('app/assets/fonts/Gotham-Medium.otf')
