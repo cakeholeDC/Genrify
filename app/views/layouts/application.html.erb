@@ -9,12 +9,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="background-color: #1DB954; color: #000000">
-    <h1>Welcome to Genrify™!</h1>
+  <body style="background-color: #1DB954; color: #000000; font-family: 'Gotham-Medium'">
+    <a href="/"><%= image_tag 'Genrify_Full_Black.png', style: 'width:35%;height:auto;' %></a>
+    <!-- <h1>Welcome to Genrify™!</h1> -->
     <nav>
-      <%= link_to "All Songs", songs_path %>
-      <%= link_to "All Artists", artists_path %>
-      <%= link_to "All Genres", genres_path %>
+      <%= link_to "Browse by Song", songs_path %>
+      <%= link_to "Browse by Artist", artists_path %>
+      <%= link_to "Browse by Genre", genres_path %>
     </nav>
 
     <%= yield %>
