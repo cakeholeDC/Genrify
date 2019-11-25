@@ -1,5 +1,9 @@
 <h1><%= @song.name %>'s Detail Page</h1>
     <div>
+        <%= button_to "Edit Song", edit_song_path(@song), method: :get %>
+        <%= button_to "Delete Song", song_path(@song), method: :delete, data: {confirm: "Are you sure you'd like to delete #{@song.name}?"} %>
+    </div>
+    <div>
         <p>
             Artist: <%= link_to @song.artist.name, artist_path(@song.artist) %>
             &nbsp; Genre: <%= link_to @song.genre.name, genre_path(@song.genre) %>
