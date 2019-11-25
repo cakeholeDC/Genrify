@@ -1,0 +1,7 @@
+<h1>All Songs</h1>
+    <%= link_to "Select to Make a New Song", new_song_path %>
+    <ul>
+    <% @songs.each do |song| %>
+        <li style="padding-bottom: 10px;"><%= link_to song.name + "  by:  " + song.artist.name, song_path(song) %></li>
+    <% end %>
+    </ul>

@@ -5,9 +5,6 @@ class GenresController < ApplicationController
 		@genres = Genre.all
 	end
 
-	# def show
-	# end
-
 	def new
 		@genre = Genre.new
 	end
@@ -17,17 +14,12 @@ class GenresController < ApplicationController
 		redirect_to genre_path(genre)
 	end
 
-	# def edit
-	# end
-
 	def update
 		@genre.update(genre_strong_params)
 		redirect_to genre_path(@genre)
 	end
 
 	def destroy
-		# genre = Genre.find(params[:id])
-		# byebug
 		@genre.destroy
 		redirect_to genres_path
 	end

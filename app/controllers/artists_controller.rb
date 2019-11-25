@@ -5,9 +5,6 @@ class ArtistsController < ApplicationController
 		@artists = Artist.all
 	end
 
-	# def show
-	# end
-
 	def new
 		@artist = Artist.new
 	end
@@ -17,17 +14,12 @@ class ArtistsController < ApplicationController
 		redirect_to artist_path(artist)
 	end
 
-	# def edit
-	# end
-
 	def update
 		@artist.update(artist_strong_params)
 		redirect_to artist_path(@artist)
 	end
 
 	def destroy
-		# artist = Artist.find(params[:id])
-		# byebug
 		@artist.destroy
 		redirect_to artists_path
 	end
