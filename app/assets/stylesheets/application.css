@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+   font-family: 'Gotham-Medium';
+   src: url('app/assets/fonts/Gotham-Medium.otf')
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #fff;
+}
+
