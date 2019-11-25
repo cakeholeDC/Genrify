@@ -14,6 +14,12 @@
  *= require_self
  */
 
+ body {
+ 	background-color: #1DB954;
+ 	color: #000000;
+ 	font-family: 'Gotham-Medium'
+ }
+
  @font-face {
    font-family: 'Gotham-Medium';
    src: url('app/assets/fonts/Gotham-Medium.otf')
