@@ -1,4 +1,4 @@
-<h1><%= @song.name %>'s Detail Page</h1>
+<h1><%= @song.name %></h1>
     <div>
         <%= button_to "Edit Song", edit_song_path(@song), method: :get %>
         <%= button_to "Delete Song", song_path(@song), method: :delete, data: {confirm: "Are you sure you'd like to delete #{@song.name}?"} %>
